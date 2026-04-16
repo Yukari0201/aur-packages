@@ -1,4 +1,5 @@
 # package src/pkg archives, downloaded sources
+*.AppImage
 *.tar*
 *.tgz
 *.zip
