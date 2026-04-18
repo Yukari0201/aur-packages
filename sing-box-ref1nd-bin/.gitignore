@@ -1,0 +1,6 @@
+config.json
+sing-box.rules
+sing-box.service
+sing-box@.service
+sing-box-split-dns.xml
+sing-box.sysusers

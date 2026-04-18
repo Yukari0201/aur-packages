@@ -14,12 +14,12 @@ license=('GPL-3.0')
 provides=("$_pkgname")
 
 source=(
-    "config.json"
-    "sing-box.rules"
-    "sing-box.service"
-    "sing-box@.service"
-    "sing-box-split-dns.xml"
-    "sing-box.sysusers"
+    "config.json::https://raw.githubusercontent.com/reF1nd/sing-box/refs/tags/v${_pkgver}/release/config/config.json"
+    "sing-box.rules::https://raw.githubusercontent.com/reF1nd/sing-box/refs/tags/v${_pkgver}/release/config/sing-box.rules"
+    "sing-box.service::https://raw.githubusercontent.com/reF1nd/sing-box/refs/tags/v${_pkgver}/release/config/sing-box.service"
+    "sing-box@.service::https://raw.githubusercontent.com/reF1nd/sing-box/refs/tags/v${_pkgver}/release/config/sing-box@.service"
+    "sing-box-split-dns.xml::https://raw.githubusercontent.com/reF1nd/sing-box/refs/tags/v${_pkgver}/release/config/sing-box-split-dns.xml"
+    "sing-box.sysusers::https://raw.githubusercontent.com/reF1nd/sing-box/refs/tags/v${_pkgver}/release/config/sing-box.sysusers"
 )
 source_x86_64=("sing-box-${_pkgver}-linux-amd64-purego.tar.gz::https://github.com/reF1nd/sing-box-releases/releases/download/v${_pkgver}/sing-box-${_pkgver}-linux-amd64-purego.tar.gz")
 source_aarch64=("sing-box-${_pkgver}-linux-arm64-purego.tar.gz::https://github.com/reF1nd/sing-box-releases/releases/download/v${_pkgver}/sing-box-${_pkgver}-linux-arm64-purego.tar.gz")
