@@ -24,7 +24,7 @@
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
-      "allowedVersions": "/-(alpha|beta|rc)/i"
+      "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)/i"
     }
   ]
 }
