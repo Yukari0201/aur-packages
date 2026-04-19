@@ -21,15 +21,10 @@
   ],
   "packageRules": [
     {
+      "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
-      "matchCurrentValue": "/-(alpha|beta|rc)/",
       "ignoreUnstable": false,
-      "allowedVersions": "/-(alpha|beta|rc)/"
-    },
-    {
-      "matchDepNames": ["reF1nd/sing-box-releases"],
-      "matchCurrentValue": "/^\\d+\\.\\d+\\.\\d+(-reF1nd)?(\\.\\d+)?$/",
-      "ignoreUnstable": true
+      "allowedVersions": "/-(alpha|beta|rc)/i"
     }
   ]
 }
