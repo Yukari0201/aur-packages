@@ -21,16 +21,15 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["reF1nd/sing-box-releases"],
-      "matchStrings": ["_beta_pkgver=.*"],
+      "matchDepNames": ["reF1nd/sing-box-releases"],
+      "matchCurrentValue": "/-(alpha|beta|rc)/",
       "ignoreUnstable": false,
-      "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)/i"
+      "allowedVersions": "/-(alpha|beta|rc)/"
     },
     {
-      "matchPackageNames": ["reF1nd/sing-box-releases"],
-      "matchStrings": ["_pkgver=.*"],
-      "ignoreUnstable": true,
-      "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+(-reF1nd)?(\\.\\d+)?$/"
+      "matchDepNames": ["reF1nd/sing-box-releases"],
+      "matchCurrentValue": "/^\\d+\\.\\d+\\.\\d+(-reF1nd)?(\\.\\d+)?$/",
+      "ignoreUnstable": true
     }
   ]
 }
