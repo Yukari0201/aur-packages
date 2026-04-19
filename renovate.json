@@ -14,10 +14,18 @@
         "/(^|/)PKGBUILD$/"
       ],
       "matchStrings": [
-        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)",
-        "_pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "(?:pkgver|_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>.*)$"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "reF1nd/sing-box-releases: allow unstable versions",
+      "matchDatasources": ["github-tags"],
+      "matchPackageNames": ["reF1nd/sing-box-releases"],
+      "ignoreUnstable": false,
+      "versioning": "semver"
     }
   ]
 }
