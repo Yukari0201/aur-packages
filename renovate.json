@@ -10,24 +10,11 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/(^|/)PKGBUILD$/"
-      ],
+      "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
         "(?:pkgver|_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>.*)$"
-    },
-    {
-      "description": "针对 sing-box reF1nd Beta 的特殊排序抓取",
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/(^|/)PKGBUILD$/"
-      ],
-      "matchStrings": [
-        "(?:_beta_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
-      ],
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+)"
     }
   ],
   "packageRules": [
@@ -35,7 +22,7 @@
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
-      "versioning": "semver"
+      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?:alpha|beta|rc)\\.(?<build>\\d+)-reF1nd(?:\\.(?<revision>\\d+))?$"
     }
   ]
 }
