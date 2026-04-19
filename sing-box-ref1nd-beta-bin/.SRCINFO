@@ -14,6 +14,7 @@ pkgbase = sing-box-ref1nd-beta-bin
 	conflicts = sing-box-beta
 	conflicts = sing-box-beta-bin
 	conflicts = sing-box-ref1nd
+	conflicts = sing-box-ref1nd-bin
 	conflicts = sing-box-ref1nd-git
 	backup = etc/sing-box/config.json
 	source = config.json::https://raw.githubusercontent.com/reF1nd/sing-box/refs/tags/v1.14.0-alpha.13-reF1nd.1/release/config/config.json
