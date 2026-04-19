@@ -25,7 +25,9 @@
       "matchDatasources": ["github-tags"],
       "matchPackageNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
-      "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)/i"
+      "versioning": "semver",
+      "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)/i",
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)\\.(?<patch>\\d+).+)$"
     }
   ]
 }
