@@ -14,7 +14,7 @@
         "/(^|/)PKGBUILD$/"
       ],
       "matchStrings": [
-        "(?:pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "(?:pkgver|_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>.*)$"
     },
@@ -25,7 +25,7 @@
         "/(^|/)PKGBUILD$/"
       ],
       "matchStrings": [
-        "(?:_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "(?:_beta_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+)"
     }
