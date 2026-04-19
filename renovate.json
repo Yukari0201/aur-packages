@@ -14,9 +14,20 @@
         "/(^|/)PKGBUILD$/"
       ],
       "matchStrings": [
-        "(?:pkgver|_pkgver|_beta_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "(?:pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>.*)$"
+    },
+    {
+      "description": "针对 sing-box reF1nd Beta 的特殊排序抓取",
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/)PKGBUILD$/"
+      ],
+      "matchStrings": [
+        "(?:_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*) registryUrl=https://github.com/reF1nd/sing-box-releases/tags"
+      ],
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+.*)$"
     }
   ],
   "packageRules": [
@@ -24,8 +35,7 @@
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
-      "versioning": "semver",
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)\\.(?<patch>\\d+).+)$"
+      "versioning": "semver"
     }
   ]
 }
