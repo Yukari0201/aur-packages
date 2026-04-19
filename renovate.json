@@ -25,7 +25,7 @@
         "/(^|/)PKGBUILD$/"
       ],
       "matchStrings": [
-        "(?:_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*) registryUrl=https://github.com/reF1nd/sing-box-releases/tags"
+        "(?:_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+.*)$"
     }
