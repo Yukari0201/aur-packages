@@ -21,10 +21,13 @@
   ],
   "packageRules": [
     {
-      "description": "sing-box-beta-bin: allow unstable versions",
-      "matchDatasources": ["github-releases"],
+      "matchStrings": ["_pkgver=.*"],
       "matchPackageNames": ["reF1nd/sing-box-releases"],
+      "ignoreUnstable": true
+    },
+    {
       "matchStrings": ["_beta_pkgver=.*"],
+      "matchPackageNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
       "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)/i"
     }
