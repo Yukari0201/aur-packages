@@ -27,7 +27,7 @@
       "matchStrings": [
         "(?:_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+.*)$"
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+)"
     }
   ],
   "packageRules": [
