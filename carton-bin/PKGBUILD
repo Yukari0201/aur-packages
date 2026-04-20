@@ -39,7 +39,17 @@ package() {
     ln -s "/opt/${_pkgname}/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
 
     # Desktop file
-    install -Dm644 "${srcdir}/${_pkgname}.desktop" "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
+    install -dm755 "${pkgdir}/usr/share/applications/"
+    cat > "${pkgdir}/usr/share/applications/${_pkgname}.desktop" <<EOF
+[Desktop Entry]
+Name=Carton
+Exec=/usr/bin/carton
+Icon=carton
+Type=Application
+Comment=A Windows and Linux GUI client for sing-box.
+Terminal=false
+Categories=Network;
+EOF
 
     # Icon images
     install -dm755 "${pkgdir}/usr/share/"

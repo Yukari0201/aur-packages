@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=carton
-Comment=A Windows and Linux GUI client for sing-box.
-Icon=carton_icon
-Exec=carton
-StartupWMClass=carton
-Categories=Utility;
