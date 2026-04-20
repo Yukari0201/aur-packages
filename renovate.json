@@ -15,6 +15,14 @@
         "(?:pkgver|_pkgver)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
+      "matchStrings": [
+        "(?:_pkgver_beta)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+      ],
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.(?<revision>\\d+))?)(?:-reF1nd)?(?<revision>\\.\\d+)?$"
     }
   ],
   "packageRules": [
@@ -22,7 +30,7 @@
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
-      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?:alpha|beta|rc)\\.(?<build>\\d+)-reF1nd(?:\\.(?<revision>\\d+))?$"
+      "versioning": "semver"
     }
   ]
 }
