@@ -14,7 +14,6 @@ provides=("${_pkgname}")
 conflicts=("${_pkgname}" "${_pkgname}-appimage")
 
 source=(
-    "carton.desktop"
     "LICENSE::https://raw.githubusercontent.com/821869798/carton/refs/tags/v${pkgver}/LICENSE"
     "carton_icon.png::https://raw.githubusercontent.com/821869798/carton/refs/heads/main/src/carton.GUI/Assets/carton_icon.png"
 )
@@ -22,7 +21,6 @@ source_x86_64=("${_pkgname}-v${pkgver}-x64-portable.tar.gz::https://github.com/8
 source_aarch64=("${_pkgname}-v${pkgver}-arm64-portable.tar.gz::https://github.com/821869798/carton/releases/download/v${pkgver}/${_pkgname}-${pkgver}-linux-arm64-portable.tar.gz")
 
 sha256sums=(
-    '0343976352e2894a871c20e6eb43b2fe06764edf25df8b0b42fc1e63470cca59'
     'd0f7cd798fd03274d6742245e320bbd2133dfdb7161c4470df4ea862b4fa57dd'
     'ddcf47960f17c5652904b24ad99a4a92af03dab850b8f29e50401d2a4a038138'
 )
