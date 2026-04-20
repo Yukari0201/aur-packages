@@ -22,7 +22,7 @@
       "matchStrings": [
         "(?:_pkgver_beta)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.(?<revision>\\d+))?)(?:-reF1nd)?(?<revision>\\.\\d+)?$"
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?:\\.\\d+)?$"
     }
   ],
   "packageRules": [
