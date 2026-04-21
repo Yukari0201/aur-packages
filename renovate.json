@@ -20,7 +20,7 @@
       "customType": "regex",
       "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
-        "(?:_pkgver_beta)=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "(?:_pkgver_beta)=(?<currentValue>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?:\\.\\d+)? # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
       "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?:\\.\\d+)?$"
     }
@@ -30,7 +30,7 @@
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
-      "versioning": "semver-coerced"
+      "versioning": "semver"
     }
   ]
 }
