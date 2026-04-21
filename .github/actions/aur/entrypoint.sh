@@ -41,7 +41,7 @@ git diff .SRCINFO
 echo "::endgroup::"
 
 echo "::group::Copying files from $HOME/gh-action to $WORKPATH"
-sudo cp -fv .gitignore "$WORKPATH"/.gitignore
+sudo cp -afv .gitignore "$WORKPATH"/.gitignore
 sudo cp -fv PKGBUILD "$WORKPATH"/PKGBUILD
 sudo cp -fv .SRCINFO "$WORKPATH"/.SRCINFO
 sudo cp -fv ./* "$WORKPATH"/
