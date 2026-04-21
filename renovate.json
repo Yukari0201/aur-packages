@@ -30,7 +30,7 @@
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "ignoreUnstable": false,
-      "versioning": "semver"
+      "versioning": "semver-coerced"
     }
   ]
 }
