@@ -2,7 +2,7 @@
 
 _pkgname=sing-box
 pkgname="$_pkgname"-ref1nd-beta-bin
-_pkgver_beta=1.14.0-alpha.15-reF1nd # renovate: datasource=github-tags depName=reF1nd/sing-box-releases
+_pkgver_beta=1.14.0-alpha.16-reF1nd # renovate: datasource=github-tags depName=reF1nd/sing-box-releases
 pkgver="${_pkgver_beta//-/.}"
 pkgrel=1
 
