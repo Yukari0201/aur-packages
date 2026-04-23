@@ -37,12 +37,14 @@
     {
       "matchDatasources": ["github-releases"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
+      "groupName": "sing-box reF1nd beta",
       "ignoreUnstable": true,
       "versioning": "semver"
     },
     {
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
+      "groupName": "sing-box reF1nd stable",
       "ignoreUnstable": false,
       "versioning": "semver"
     }
