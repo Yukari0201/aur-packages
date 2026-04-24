@@ -3,7 +3,7 @@
 _pkgname=carton
 
 pkgname="${_pkgname}"-appimage
-pkgver=0.1.8 # renovate: datasource=github-tags depName=821869798/carton
+pkgver=0.1.9 # renovate: datasource=github-tags depName=821869798/carton
 pkgrel=3
 pkgdesc="A Windows and Linux GUI client for sing-box.(主打高性能和易用性，非electron tauri等web套皮)"
 arch=('x86_64' 'aarch64')
