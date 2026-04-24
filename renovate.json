@@ -47,6 +47,16 @@
       "groupName": "sing-box reF1nd stable",
       "ignoreUnstable": false,
       "versioning": "semver"
+    },
+    {
+      "matchDatasources": ["github-releases"],
+      "matchDepNames": ["821869798/carton"],
+      "groupName": "carton-bin"
+    },
+    {
+      "matchDatasources": ["github-tags"],
+      "matchDepNames": ["821869798/carton"],
+      "groupName": "carton-appimage"
     }
   ]
 }
