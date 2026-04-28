@@ -57,6 +57,16 @@
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["821869798/carton"],
       "groupName": "carton-appimage"
+    },
+    {
+      "matchDatasources": ["github-releases"],
+      "matchDepNames": ["Yukari0201/fcitx5-pinyin-mihoyo"],
+      "groupName": "Fcitx5 pinyin mihoyo"
+    },
+    {
+      "matchDatasources": ["github-tags"],
+      "matchDepNames": ["Yukari0201/fcitx5-pinyin-mihoyo"],
+      "groupName": "Rime pinyin mihoyo"
     }
   ]
 }
