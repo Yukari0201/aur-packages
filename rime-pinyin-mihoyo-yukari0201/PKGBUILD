@@ -1,11 +1,11 @@
 # Maintainer: Yukari0201 130890393+Yukari0201@users.noreply.github.com
 
 pkgname=rime-pinyin-mihoyo-yukari0201 # 由于已经存在了一个 fcitx5-pinyin-mihoyo，我不得不加一个后缀
-pkgver=20260427
+pkgver=20260427 # renovate: datasource=github-tags depName=Yukari0201/fcitx5-pinyin-mihoyo
 pkgrel=1
 pkgdesc="Rime Pinyin (inclue wanxiang pinyin) Dictionary for miHoYo Games from wiki.biligame.com"
 arch=('any')
-url="https://github.com/Yukari0201/fcitx5-pinyin-mihoyo" # renovate: datasource=github-tags depName=Yukari0201/fcitx5-pinyin-mihoyo
+url="https://github.com/Yukari0201/fcitx5-pinyin-mihoyo"
 license=('CC-BY-SA-4.0')
 source=(
     "${url}/releases/download/${pkgver}/genshin.dict.yaml"
