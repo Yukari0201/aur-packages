@@ -12,7 +12,7 @@ source=(
     "${url}/releases/download/${pkgver}/honkai3rd.dict.yaml"
     "${url}/releases/download/${pkgver}/starrail.dict.yaml"
     "${url}/releases/download/${pkgver}/zenlesszonezero.dict.yaml"
-    "${url}/releases/download/${pkgver}/wanxiang_genshin.dict.yaml "
+    "${url}/releases/download/${pkgver}/wanxiang_genshin.dict.yaml"
     "${url}/releases/download/${pkgver}/wanxiang_honkai3rd.dict.yaml"
     "${url}/releases/download/${pkgver}/wanxiang_starrail.dict.yaml"
     "${url}/releases/download/${pkgver}/wanxiang_zenlesszonezero.dict.yaml"
