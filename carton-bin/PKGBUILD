@@ -27,7 +27,7 @@ sha256sums_aarch64=('3d16a4dc06977be3a5c9d692cc947b4769cd5426164a5d7ed62ef4ea632
 
 package() {
     install -dm755 "${pkgdir}/opt/${_pkgname}"
-    cp -p "${srcdir}"/{"${_pkgname}",*.so} "${pkgdir}/opt/${_pkgname}/"
+    cp -p "${srcdir}"/{"${_pkgname}",sing-box,*.so} "${pkgdir}/opt/${_pkgname}/"
 
     patchelf --set-rpath '$ORIGIN' "${pkgdir}/opt/${_pkgname}/${_pkgname}"
 
@@ -44,7 +44,7 @@ Icon=carton_icon
 Type=Application
 Comment=A Windows and Linux GUI client for sing-box.
 Terminal=false
-Categories=Network;
+Categories=Utility;
 EOF
 
     # Icon images
