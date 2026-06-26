@@ -21,14 +21,16 @@
       "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
         "(?:_pkgver_stable)=(?<currentValue>[^#\\s]+) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
-      ]
+      ],
+      "extractVersionTemplate": "^v?(?<version>.*)$"
     },
     {
       "customType": "regex",
       "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
         "(?:_pkgver_beta)=(?<currentValue>[^#\\s]+) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
-      ]
+      ],
+      "extractVersionTemplate": "^v?(?<version>.*)$" 
     }
   ],
   "packageRules": [
