@@ -20,17 +20,17 @@
       "customType": "regex",
       "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
-        "(?:_pkgver_stable)=(?<currentValue>\\d+\\.\\d+\\.\\d+)(?:-reF1nd)?(?:\\.\\d+)? # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "(?:_pkgver_stable)=(?<currentValue>\\d+\\.\\d+\\.\\d+)(?:-reF1nd)?(?<revision>\\.\\d+)? # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+)(?:-reF1nd)?(?:\\.\\d+)?$"
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+)(?:-reF1nd)?(?<revision>\\.\\d+)?$"
     },
     {
       "customType": "regex",
       "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
-        "(?:_pkgver_beta)=(?<currentValue>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?:\\.\\d+)? # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "(?:_pkgver_beta)=(?<currentValue>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?<revision>\\.\\d+)? # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?:\\.\\d+)?$"
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?<revision>\\.\\d+)?$"
     }
   ],
   "packageRules": [
