@@ -20,17 +20,15 @@
       "customType": "regex",
       "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
-        "(?:_pkgver_stable)=(?<currentValue>\\d+\\.\\d+\\.\\d+)(?:-reF1nd)?(?<revision>\\.\\d+)? # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
-      ],
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+)(?:-reF1nd)?(?<revision>\\.\\d+)?$"
+        "(?:_pkgver_stable)=(?<currentValue>[^#\\s]+) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+      ]
     },
     {
       "customType": "regex",
       "managerFilePatterns": ["/(^|/)PKGBUILD$/"],
       "matchStrings": [
-        "(?:_pkgver_beta)=(?<currentValue>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?<revision>\\.\\d+)? # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
-      ],
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+-(?:alpha|beta|rc)\\.\\d+(?:\\.\\d+)?)(?:-reF1nd)?(?<revision>\\.\\d+)?$"
+        "(?:_pkgver_beta)=(?<currentValue>[^#\\s]+) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+      ]
     }
   ],
   "packageRules": [
@@ -39,14 +37,14 @@
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "groupName": "sing-box reF1nd stable",
       "ignoreUnstable": true,
-      "versioning": "semver"
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-reF1nd(?:\\.(?<build>\\d+))?$"
     },
     {
       "matchDatasources": ["github-tags"],
       "matchDepNames": ["reF1nd/sing-box-releases"],
       "groupName": "sing-box reF1nd beta",
       "ignoreUnstable": false,
-      "versioning": "semver"
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<prerelease>alpha|beta|rc)\\.(?<compatibility>\\d+)-reF1nd(?:\\.(?<build>\\d+))?$"
     },
     {
       "matchDatasources": ["github-releases"],
