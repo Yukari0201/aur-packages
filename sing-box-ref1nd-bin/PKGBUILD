@@ -50,6 +50,7 @@ package() {
 
     cd "sing-box-$_pkgver_stable-linux-${ARCH_MAP[$CARCH]}-purego"
     install -Dm755 sing-box -t "$pkgdir/usr/bin"
+    install -Dm644 libcronet.so -t "$pkgdir/usr/lib"
     install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$_pkgname"
     install -Dm644 <(./sing-box completion bash) "$pkgdir/usr/share/bash-completion/completions/${_pkgname}"
     install -Dm644 <(./sing-box completion fish) "$pkgdir/usr/share/fish/vendor_completions.d/${_pkgname}.fish"
