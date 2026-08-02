@@ -9,12 +9,10 @@ on:
       - main
 
 jobs:
-  updpkgsums:
+  find:
     runs-on: ubuntu-latest
-    permissions:
-      # In order to make sure that the git-auto-commit-action has the permissions to write to the repository
-      # using the $GITHUB_TOKEN, we have to add the write permissions to it.
-      contents: write 
+    outputs:
+      pkgs: ${{ steps.find.outputs.pkgs }}
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -22,22 +20,45 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.ref }}
 
-      - name: Find updated package
+      - name: Find updated packages
+        id: find
         run: |
           #!/usr/bin/env bash
           set -euxo pipefail
 
-          echo "pkgbuild=$(git diff --name-only origin/main origin/${GITHUB_HEAD_REF} "*PKGBUILD" | head -1 | xargs dirname)" >> $GITHUB_ENV
+          pkgs=$(git diff --name-only origin/main origin/${GITHUB_HEAD_REF} "*PKGBUILD" \
+            | xargs -n1 dirname | sort -u)
+          echo "pkgs=$(echo "$pkgs" | jq -R -s -c 'split("\n") | map(select(. != ""))')" >> "$GITHUB_OUTPUT"
+          echo "Found packages: $pkgs"
 
-      - name: Validate package
-        if: ${{ env.pkgbuild != '' }}
+  updpkgsums:
+    needs: find
+    if: ${{ needs.find.outputs.pkgs != '[]' }}
+    runs-on: ubuntu-latest
+    permissions:
+      # In order to make sure that the git-auto-commit-action has the permissions to write to the repository
+      # using the $GITHUB_TOKEN, we have to add the write permissions to it.
+      contents: write
+    strategy:
+      fail-fast: false
+      # Serial: each job pushes to the same PR branch, so avoid concurrent commit races
+      max-parallel: 1
+      matrix:
+        pkg: ${{ fromJson(needs.find.outputs.pkgs) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: Update checksums
         uses: ./.github/actions/aur
         with:
           action: 'updpkgsums'
-          pkgname: ${{ env.pkgbuild }}
+          pkgname: ${{ matrix.pkg }}
 
       - name: Commit
-        if: ${{ env.pkgbuild != '' }}
         uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         with:
-          file_pattern: '*/PKGBUILD */.SRCINFO'
+          file_pattern: '${{ matrix.pkg }}/PKGBUILD ${{ matrix.pkg }}/.SRCINFO'
