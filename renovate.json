@@ -45,16 +45,6 @@
       "groupName": "sing-box reF1nd beta",
       "ignoreUnstable": false,
       "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<prerelease>(?:alpha|beta|rc)\\.\\d+)-reF1nd(?:\\.(?<revision>\\d+))?$"
-    },
-    {
-      "matchDatasources": ["github-releases"],
-      "matchDepNames": ["Yukari0201/fcitx5-pinyin-mihoyo"],
-      "groupName": "Fcitx5 pinyin mihoyo"
-    },
-    {
-      "matchDatasources": ["github-tags"],
-      "matchDepNames": ["Yukari0201/fcitx5-pinyin-mihoyo"],
-      "groupName": "Rime pinyin mihoyo"
     }
   ]
 }
