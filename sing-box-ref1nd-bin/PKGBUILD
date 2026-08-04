@@ -4,7 +4,7 @@ _pkgname=sing-box
 pkgname="$_pkgname"-ref1nd-bin
 _pkgver_stable=1.13.16-reF1nd # renovate: datasource=github-releases depName=reF1nd/sing-box-releases
 pkgver="${_pkgver_stable//-/\.}"
-pkgrel=3
+pkgrel=1
 
 pkgdesc='The universal proxy platform.'
 arch=('x86_64' 'aarch64')
