@@ -2,7 +2,7 @@
 
 pkgbase=fcitx5-pinyin-mihoyo-yukari0201
 pkgname=()
-pkgver=20260731 # renovate: datasource=github-releases depName=Yukari0201/fcitx5-pinyin-mihoyo
+pkgver=20260819 # renovate: datasource=github-releases depName=Yukari0201/fcitx5-pinyin-mihoyo
 pkgrel=1
 pkgdesc="Fcitx 5 / Rime / Rime Wanxiang Pinyin Dictionaries for miHoYo Games from wiki.biligame.com"
 arch=('any')
