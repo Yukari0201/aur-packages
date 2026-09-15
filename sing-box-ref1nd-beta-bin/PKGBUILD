@@ -31,8 +31,8 @@ sha256sums=('4da8152e6cc1b50b1eaa4ff5606510aeb6d3f6a6a5c91614d4b2c0ea9a2b1bde'
             '0b8740010bb3b2a5b65f1cc444b00127372d015f70f272ed566606949ed2b91b'
             'ebdab3b912603c44b4d76640c5db5c4bc0ca04213d7f34ccaa5e789ba40b426f'
             '0d0631619b6f680b9a80b9a8f65c7a30f2565e80279182f63c77854051c5d473')
-sha256sums_x86_64=('86e0e295d7bd397447b769b1a4b34aedb32bd3a751ae597c7cbc628595d3aebf')
-sha256sums_aarch64=('f9e5483a8e6fe2e4a311413282e620185421f44c4ddc64a52876c7f5accb5597')
+sha256sums_x86_64=('b3fc77ab7336aea9ae07543094b2a5fd084c980e93211d99433ed003fe9561c6')
+sha256sums_aarch64=('51904b5c26b78d67bb516ddf3bdb131ecdafc1bfcf7c284c45d4f0ba9a346a89')
 
 conflicts=("$_pkgname" "$_pkgname-bin" "$_pkgname-git" "$_pkgname-alpha" "$_pkgname-beta" "$_pkgname-beta-bin" "$_pkgname-ref1nd" "$_pkgname-ref1nd-bin" "$_pkgname-ref1nd-git")
 
