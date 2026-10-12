@@ -1,7 +1,7 @@
 pkgbase = sing-box-ref1nd-bin
 	pkgdesc = The universal proxy platform.
 	pkgver = 1.14.3.reF1nd
-	pkgrel = 2
+	pkgrel = 1
 	url = https://github.com/reF1nd/sing-box
 	arch = x86_64
 	arch = aarch64
