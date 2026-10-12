@@ -37,7 +37,8 @@ provides=("${_pkgname}")
 conflicts=("${_pkgname}")
 
 source=(
-    "carton.desktop::${url}/raw/refs/tags/v${pkgver}/packaging/linux/carton.desktop"
+    "carton.desktop::${url}/raw/refs/heads/main/packaging/linux/carton.desktop"
+    # "carton.desktop::${url}/raw/refs/tags/v${pkgver}/packaging/linux/carton.desktop"
     "carton.png::${url}/raw/refs/tags/v${pkgver}/src/carton.GUI/Assets/carton_icon.png"
     "LICENSE::${url}/raw/refs/tags/v${pkgver}/LICENSE"
 )
